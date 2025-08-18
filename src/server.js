@@ -4,6 +4,7 @@ import cors from 'cors';
 const app = express();
 // app.use(cors({ origin: ['http://localhost:3000','https://your-frontend.app'] }));
 app.use(cors({ origin: '*' }));
+app.use(express.json());
 
 app.get('/health', (_req, res) => res.json({ ok: true }));
 
